@@ -6,5 +6,7 @@ namespace NYTBestseller.Domain.Interfaces
     {
         Task<CategoriesDto<GeneralCategory>> GetBestsellerCategories();
         Task<CategoryDto<SpecificCategory>> GetBestsellerCategory(string categoryName);
+        Task<CategoriesDto<BookReview>> GetBookByAuthor(string author);
+
     }
 }

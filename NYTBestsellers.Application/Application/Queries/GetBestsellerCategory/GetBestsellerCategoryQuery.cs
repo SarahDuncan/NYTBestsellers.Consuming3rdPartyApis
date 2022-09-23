@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace NYTBestsellers.Application.Application.Queries
+namespace NYTBestsellers.Application.Application.Queries.GetBestsellerCategory
 {
     public class GetBestsellerCategoryQuery : IRequest<GetBestsellerCategoryQueryResult>
     {

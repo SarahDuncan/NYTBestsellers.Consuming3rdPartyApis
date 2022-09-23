@@ -1,7 +1,7 @@
 using NYTBestseller.Domain.Interfaces;
-using NYTBestsellers.Application.Application.Queries;
 using NYTBestsellers.Infrastructure;
 using MediatR;
+using NYTBestsellers.Application.Application.Queries.GetBestsellerCategories;
 
 internal class Program
 {

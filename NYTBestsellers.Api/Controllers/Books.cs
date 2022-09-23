@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NYTBestsellers.Application.Application.Queries;
+using NYTBestsellers.Application.Application.Queries.GetBestsellerCategories;
+using NYTBestsellers.Application.Application.Queries.GetBestsellerCategory;
+using NYTBestsellers.Application.Application.Queries.GetBookByAuthor;
 
 namespace NYTBestsellers.Api.Controllers
 {
@@ -34,6 +37,20 @@ namespace NYTBestsellers.Api.Controllers
         public async Task<IActionResult> BestsellersCategory(string categoryName)
         {
             var result = await mediator.Send(new GetBestsellerCategoryQuery() { CategoryName = categoryName });
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("BookReviewByAuthor")]
+        public async Task<IActionResult> GetBookByAuthor(string author)
+        {
+            var result = await mediator.Send(new GetBookByAuthorQuery() { Author = author });
 
             if (result == null)
             {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using NYTBestseller.Domain.Interfaces;
 
-namespace NYTBestsellers.Application.Application.Queries
+namespace NYTBestsellers.Application.Application.Queries.GetBestsellerCategory
 {
     public class GetBestsellerCategoryQueryHandler : IRequestHandler<GetBestsellerCategoryQuery, GetBestsellerCategoryQueryResult>
     {

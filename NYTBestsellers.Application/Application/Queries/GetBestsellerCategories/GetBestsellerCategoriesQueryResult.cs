@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using NYTBestseller.Domain.Models;
 
-namespace NYTBestsellers.Application.Application.Queries
+namespace NYTBestsellers.Application.Application.Queries.GetBestsellerCategories
 {
     public class GetBestsellerCategoriesQueryResult : IRequest<GetBestsellerCategoriesQuery>
     {
