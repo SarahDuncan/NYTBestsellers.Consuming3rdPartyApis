@@ -56,7 +56,23 @@ namespace NYTBestsellers.Infrastructure
         public async Task<CategoriesDto<BookReview>> GetBookByAuthor(string author)
         {
             var url = $"reviews.json?author={author}&api-key={apiKey}";
+            return GetBook(url).Result;
+        }
 
+        public async Task<CategoriesDto<BookReview>> GetBookByTitle(string title)
+        {
+            var url = $"reviews.json?title={title}&api-key={apiKey}";
+            return GetBook(url).Result;
+        }
+
+        public async Task<CategoriesDto<BookReview>> GetBookByISBN(string isbn)
+        {
+            var url = $"reviews.json?isbn={isbn}&api-key={apiKey}";
+            return GetBook(url).Result;
+        }
+
+        public async Task<CategoriesDto<BookReview>> GetBook(string url)
+        {
             var response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)

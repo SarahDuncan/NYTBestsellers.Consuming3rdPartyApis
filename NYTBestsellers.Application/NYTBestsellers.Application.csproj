@@ -16,9 +16,4 @@
     <ProjectReference Include="..\NYTBestsellers.Infrastructure\NYTBestsellers.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Queries\GetBookByISBN\" />
-    <Folder Include="Application\Queries\GetBookByTitle\" />
-  </ItemGroup>
-
 </Project>
